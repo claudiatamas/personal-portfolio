@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* swiper-custom.css */
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-[#6F53EF] hover:text-[#d29edc] transition-colors duration-300; /* Tailwind utilities */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-xl; /* Optional: Adjust size */
 }

@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Focuskeeper from './pages/Focuskeeper';
+import Work from './components/Work';
+import About from './components/About';
+import Therapyi from './pages/Therapyi';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<Work />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/focuskeeper" element={<Focuskeeper />} />
+        <Route path="/therapyi" element={<Therapyi />} />
+      </Routes>
+    </Router>
   );
 }
 
