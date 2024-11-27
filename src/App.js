@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Focuskeeper from './pages/Focuskeeper';
 import Work from './components/Work';
 import About from './components/About';
-import Therapyi from './pages/Therapyi';
+
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/work" element={<Work />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/focuskeeper" element={<Focuskeeper />} />
-        <Route path="/therapyi" element={<Therapyi />} />
+    
       </Routes>
     </Router>
   );
