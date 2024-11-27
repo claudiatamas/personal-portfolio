@@ -15,7 +15,7 @@ const projects = [
     title: "THERAPYi",
     description: "Therapyi is a dedicated platform designed to promote mental health awareness and provide essential support for students navigating the challenges of academic and personal life. This app connects users with counselors, ensuring access to professional guidance and a safe environment.",
     paragraph: "PHP | JavaScript | HTML | CSS | SQL",
-    link: "/therapyi",
+    link: "https://github.com/claudiatamas/therapyi",
     image: "/therapy.png",
   },
 ];
