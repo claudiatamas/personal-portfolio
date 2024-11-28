@@ -3,7 +3,7 @@ import { FaCamera, FaTree, FaMusic, FaCode } from "react-icons/fa";
 
 const About = () => {
   const sectionRef = useRef(null);
-  const cardRefs = useRef([]);
+  const cardRefs = useRef([]); // Initialize as an empty array
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -110,4 +110,3 @@ const About = () => {
 };
 
 export default About;
-

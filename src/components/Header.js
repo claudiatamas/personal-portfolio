@@ -6,6 +6,8 @@ const Header = () => {
   const headerRef = useRef(null);
 
   useEffect(() => {
+    const currentHeaderRef = headerRef.current; // Store ref value in local variable
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -22,12 +24,12 @@ const Header = () => {
       }
     );
 
-    if (headerRef.current) observer.observe(headerRef.current);
+    if (currentHeaderRef) observer.observe(currentHeaderRef); // Use local variable
 
     return () => {
-      if (headerRef.current) observer.unobserve(headerRef.current);
+      if (currentHeaderRef) observer.unobserve(currentHeaderRef); // Use local variable
     };
-  }, []);
+  }, []); // Empty dependency array ensures the effect runs once
 
   return (
     <div
@@ -38,9 +40,6 @@ const Header = () => {
     >
       {/* Gradient  */}
       <div className="hidden md:flex absolute -bottom-16 left-20 w-80 h-80 rounded-full bg-gradient-to-r from-purple-300 to-blue-50 opacity-40 blur-3xl"></div>
-
-     
-
       <div className="hidden md:flex absolute top-8 right-12 w-80 h-80 rounded-full bg-gradient-to-r from-purple-300 to-blue-100 opacity-40 blur-3xl"></div>
 
       <div className="cursor-pointer w-40 h-40 rounded-full overflow-hidden shadow-lg mb-6 mt-20">
