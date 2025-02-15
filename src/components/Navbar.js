@@ -71,7 +71,7 @@ const Navbar = () => {
           {/* Nav Links */}
           <div className="hidden md:flex space-x-6">
             <a
-              href="/CV_Tămaș_Claudia Paula_en.pdf"
+              href="/CV_Resume_Claudia_Paula_Tamas.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"

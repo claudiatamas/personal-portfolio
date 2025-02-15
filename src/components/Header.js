@@ -66,7 +66,7 @@ const Header = () => {
       {/* Social Media Links */}
       <div className="grid grid-cols-2 gap-4 mt-6 w-full mx-auto max-w-md text-center md:flex md:justify-center md:space-x-12 md:max-w-none">
         <a
-          href="/CV_Tămaș_Claudia Paula_en.pdf"
+          href="/CV_Resume_Claudia_Paula_Tamas.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-110 transition-transform duration-200 text-2xl flex items-center text-[#2F363F] hover:text-[#6E54EF] justify-center"
