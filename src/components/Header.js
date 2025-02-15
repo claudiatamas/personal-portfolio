@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import profile from "../images/profile.jpeg";
+import profile from "../images/profile.jpg";
 import { FaLinkedin, FaFileAlt, FaFigma, FaGithub } from "react-icons/fa";
 
 const Header = () => {
   const headerRef = useRef(null);
 
   useEffect(() => {
-    const currentHeaderRef = headerRef.current; // Store ref value in local variable
+    const currentHeaderRef = headerRef.current; 
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -24,12 +24,12 @@ const Header = () => {
       }
     );
 
-    if (currentHeaderRef) observer.observe(currentHeaderRef); // Use local variable
+    if (currentHeaderRef) observer.observe(currentHeaderRef); 
 
     return () => {
-      if (currentHeaderRef) observer.unobserve(currentHeaderRef); // Use local variable
+      if (currentHeaderRef) observer.unobserve(currentHeaderRef); 
     };
-  }, []); // Empty dependency array ensures the effect runs once
+  }, []);
 
   return (
     <div
