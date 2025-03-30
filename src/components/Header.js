@@ -53,7 +53,7 @@ const Header = () => {
       <div className="cursor-pointer text-center max-w-xl px-4">
         <h1 className="text-4xl font-semibold text-[#2F363F] mb-2 transition-transform duration-300 transform hover:scale-105">
           Claudia{" "}
-          <span className="bg-clip-text text-transparent bg-[#8974f3]">
+          <span className="bg-clip-text text-transparent bg-[#ad91ed]">
             Tămaș
           </span>
         </h1>
@@ -69,7 +69,7 @@ const Header = () => {
           href="/CV_Resume_Claudia_Paula_Tamas.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-110 transition-transform duration-200 text-2xl flex items-center text-[#2F363F] hover:text-[#6E54EF] justify-center"
+          className="hover:scale-110 transition-transform duration-200 text-2xl flex items-center text-[#2F363F] hover:text-[#ad91ed] justify-center"
         >
           <FaFileAlt size={24} className="mr-2" /> Resume
         </a>
@@ -77,7 +77,7 @@ const Header = () => {
           href="https://www.linkedin.com/in/claudia-t%C4%83ma%C8%99-b79a98224/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-2xl text-[#2F363F] hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 justify-center"
+          className="flex items-center text-2xl text-[#2F363F] hover:text-[#ad91ed] hover:scale-110 transition-transform duration-200 justify-center"
         >
           <FaLinkedin size={24} className="mr-2" /> LinkedIn
         </a>
@@ -85,7 +85,7 @@ const Header = () => {
           href="/"
           target=""
           rel="noopener noreferrer"
-          className="flex items-center text-2xl text-[#2F363F] hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 justify-center"
+          className="flex items-center text-2xl text-[#2F363F] hover:text-[#ad91ed] hover:scale-110 transition-transform duration-200 justify-center"
         >
           <FaFigma size={24} className="mr-2" /> Figma
         </a>
@@ -93,7 +93,7 @@ const Header = () => {
           href="https://github.com/claudiatamas"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-2xl text-[#2F363F] hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 justify-center"
+          className="flex items-center text-2xl text-[#2F363F] hover:text-[#ad91ed] hover:scale-110 transition-transform duration-200 justify-center"
         >
           <FaGithub size={24} className="mr-2" /> GitHub
         </a>

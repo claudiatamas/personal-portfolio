@@ -76,7 +76,7 @@ const Navbar = () => {
               href="/CV_Resume_Claudia_Paula_Tamas.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
+              className="text-[#2F363F] px-3 py-1 hover:text-[#9670ef] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
             >
               Resume
             </a>
@@ -85,7 +85,7 @@ const Navbar = () => {
               to="work-section"
               smooth={true}
               duration={500}
-              className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
+              className="text-[#2F363F] px-3 py-1 hover:text-[#9670ef] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
             >
               Work
             </Link>
@@ -93,7 +93,7 @@ const Navbar = () => {
               to="about-section"
               smooth={true}
               duration={500}
-              className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
+              className="text-[#2F363F] px-3 py-1 hover:text-[#9670ef] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
             >
               About
             </Link>
@@ -101,7 +101,7 @@ const Navbar = () => {
               to="contact-section"
               smooth={true}
               duration={500}
-              className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
+              className="text-[#2F363F] px-3 py-1 hover:text-[#9670ef] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
             >
               Contact
             </Link>
@@ -116,7 +116,7 @@ const Navbar = () => {
             href="/CV_Resume_Claudia_Paula_Tamas.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
+            className="text-[#2F363F] px-3 py-1 hover:text-[#9670ef] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
           >
             Resume
           </a>
@@ -125,7 +125,7 @@ const Navbar = () => {
             to="work-section"
             smooth={true}
             duration={500}
-            className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
+            className="text-[#2F363F] px-3 py-1 hover:text-[#9670ef] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
           >
             Work
           </Link>
@@ -133,7 +133,7 @@ const Navbar = () => {
             to="about-section"
             smooth={true}
             duration={500}
-            className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
+            className="text-[#2F363F] px-3 py-1 hover:text-[#9670ef] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
           >
             About
           </Link>
@@ -141,7 +141,7 @@ const Navbar = () => {
             to="contact-section"
             smooth={true}
             duration={500}
-            className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
+            className="text-[#2F363F] px-3 py-1 hover:text-[#9670ef] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
           >
             Contact
           </Link>
