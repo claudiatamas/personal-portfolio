@@ -100,7 +100,7 @@ const About = () => {
       {/* Right Section  */}
       <div className="md:w-1/2 w-full mt-6 md:mt-0">
         <img
-          src="/about.png"
+          src="/Colaj.png"
           alt="About Me"
           className="w-full h-auto rounded-2xl transition-transform duration-300 transform hover:scale-105"
         />
