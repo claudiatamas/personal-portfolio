@@ -113,7 +113,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white text-[#2F363F] flex flex-col items-center space-y-4 py-4 shadow-md">
           <a
-            href="/CV_Resume_Claudia Paula_Tamas.pdf"
+            href="/CV_Resume_Claudia_Paula_Tamas.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#2F363F] px-3 py-1 hover:text-[#6E54EF] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
