@@ -42,7 +42,7 @@ const Header = () => {
       <div className="hidden md:flex absolute -bottom-16 left-20 w-80 h-80 rounded-full bg-gradient-to-r from-purple-300 to-blue-50 opacity-40 blur-3xl"></div>
       <div className="hidden md:flex absolute top-8 right-12 w-80 h-80 rounded-full bg-gradient-to-r from-purple-300 to-blue-100 opacity-40 blur-3xl"></div>
 
-      <div className="cursor-pointer w-40 h-40 rounded-full overflow-hidden shadow-lg mb-6 mt-12 md:mt-20">
+      <div className="cursor-pointer w-40 h-40 rounded-full overflow-hidden shadow-lg mb-6 mt-8 md:mt-20">
         <img
           src={profile}
           alt="Profile"
