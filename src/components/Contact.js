@@ -95,7 +95,7 @@ const Contact = () => {
       <div
         ref={formRef}
          id="contact-section"
-        className="relative bg-white bg-opacity-90 p-8 md:p-12 rounded-lg shadow-lg max-w-lg w-full opacity-0 translate-y-10"
+        className="relative bg-white bg-opacity-90 p-8 md:p-16 rounded-lg shadow-lg max-w-xl w-full opacity-0 translate-y-10"
       >
         <h2 className="text-4xl font-bold mb-4 text-center text-[#2F363F]">Contact Me</h2>
         <p className="text-lg text-gray-600 mb-8 text-center">
