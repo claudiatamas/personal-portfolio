@@ -78,10 +78,10 @@ const Work = () => {
             ref={(el) => (projectRefs.current[index] = el)}
             className="group opacity-0  px-4 transform translate-y-10 rounded-2xl border border-[#ebeaea] p-4 flex flex-col justify-between shadow-md bg-white dark:bg-[#1E1E1E] hover:scale-[1.02] transition-transform duration-300"
           >
-          <img
+        <img
             src={project.image}
             alt={project.title}
-            className="w-full max-w-full h-[250px] sm:h-[200px] md:h-[250px] object-cover rounded-lg mb-4 transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+            className="w-full max-w-sm md:max-w-md rounded-lg mb-4 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-auto object-cover"
           />
 
 
