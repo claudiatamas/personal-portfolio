@@ -36,7 +36,7 @@ const Header = () => {
 
           <h1 className="tracking-wider text-5xl sm:text-6xl font-light mb-2">Hi,</h1>
           <h2 className="tracking-wider text-5xl sm:text-6xl font-light mb-4">
-            I’m <span className="font-medium text-black dark:text-white">Claudia</span>
+            I’m <span className="font-medium text-black">Claudia</span>
           </h2>
           <div className="flex flex-wrap gap-2 mb-4">
 
@@ -44,7 +44,7 @@ const Header = () => {
             <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Frontend Dev</span>
             <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Educational Mentor</span>
           </div>
-          <p className="text-gray-700 dark:text-gray-300 tracking-wider mb-6 text-md font-light leading-relaxed">
+          <p className="text-gray-700 tracking-wider mb-6 text-md font-light leading-relaxed">
             Junior designer and developer on a journey to craft meaningful, honest digital experiences that feel just right.
           </p>
 

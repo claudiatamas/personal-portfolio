@@ -76,7 +76,7 @@ const Work = () => {
           <div
             key={index}
             ref={(el) => (projectRefs.current[index] = el)}
-            className="group opacity-0  px-4 transform translate-y-10 rounded-2xl border border-[#ebeaea] p-4 flex flex-col justify-between shadow-md bg-white dark:bg-[#1E1E1E] hover:scale-[1.02] transition-transform duration-300"
+            className="group opacity-0  px-4 transform translate-y-10 rounded-2xl border border-[#ebeaea] p-4 flex flex-col justify-between shadow-md bg-white  hover:scale-[1.02] transition-transform duration-300"
           >
         <img
             src={project.image}
@@ -85,7 +85,7 @@ const Work = () => {
           />
 
 
-            <h3 className="text-xl tracking-widest font-semibold text-[#2F363F] dark:text-white mb-2 py-2 ">
+            <h3 className="text-xl tracking-widest font-semibold text-[#2F363F]  mb-2 py-2 ">
               {project.title}
             </h3>
 
@@ -95,8 +95,8 @@ const Work = () => {
                   key={i}
                   className={`rounded-full px-3 py-1 text-xs ${
                     i === 0
-                      ? "bg-[rgba(197,155,255,0.2)] text-[#2F363F] dark:text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer"
-                      : "border border-gray-300 text-gray-600 dark:text-gray-300 transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                      ? "bg-[rgba(197,155,255,0.2)] text-[#2F363F]  transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                      : "border border-gray-300 text-gray-600  transition-transform duration-300 transform hover:scale-105 cursor-pointer"
                   }`}
                 >
                   {tech.trim()}
@@ -104,7 +104,7 @@ const Work = () => {
               ))}
             </div>
 
-            <p className="text-md font-light text-gray-800 dark:text-gray-300 mb-4 py-2 tracking-wide">
+            <p className="text-md font-light text-gray-800  mb-4 py-2 tracking-wide">
               {project.description}
             </p>
 
