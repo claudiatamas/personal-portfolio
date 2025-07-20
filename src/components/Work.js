@@ -1,26 +1,36 @@
 import React, { useEffect, useRef } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { Link } from "react-router-dom"; 
-import "./swiper-custom.css";  
+import { Link } from "react-router-dom";
+import "./swiper-custom.css";
 
 const projects = [
   {
     title: "Dentflow",
-    description: "Dentflow is a modern dental clinic management application that streamlines appointment scheduling, patient records, treatment plans, and X-ray analysis with AI support.",
+    description:
+      "Developing a dental management application to help dental offices efficiently organize appointments, patient records, and workflows",
     paragraph: "React JS | Tailwind CSS | Python | Artificial Intelligence",
-    link: "#", 
+    link: "#",
     image: "/dentflow.png",
   },
   {
     title: "FocusKeeper",
-    description: "FocusKeeper is a revolutionary application designed to detect signs of fatigue in real time, empowering users to make safer choices, especially while driving. By leveraging cutting-edge technology, it monitors user behavior and provides timely alerts to prevent potential accidents caused by fatigue.",
+    description:
+      "Developed an application using Python and AI to monitor and optimize user focus and energy levels during driving and work sessions.",
     paragraph: "Python | Flask | Bootstrap | Machine Learning",
-    link: "https://github.com/claudiatamas/FocusKeeper", 
+    link: "https://github.com/claudiatamas/FocusKeeper",
     image: "/focus.png",
   },
   {
-    title: "THERAPYi",
-    description: "Therapyi is a dedicated platform designed to promote mental health awareness and provide essential support for students navigating the challenges of academic and personal life. This app connects users with counselors, ensuring access to professional guidance and a safe environment.",
+    title: "Carnivora",
+    description:
+      "Website concept for plant lovers — clean design, easy navigation, and an immersive way to explore carnivorous plants.",
+    paragraph: "Figma | UX Research | Prototyping",
+    link: "https://www.figma.com/design/4JVqXFxV4ocIQj8kTQQ7EV/Carnivora-%E2%80%93-UI-UX-Passion-Project?node-id=0-1&t=GWzCVBlv5DxUMCf2-1",
+    image: "/Carnivora.png",
+  },
+  {
+    title: "Therapyi",
+    description:
+      "Therapyi is a dedicated platform designed to promote mental health awareness and provide essential support for students.",
     paragraph: "PHP | JavaScript | HTML | CSS | MySQL",
     link: "https://github.com/claudiatamas/therapyi",
     image: "/therapy.png",
@@ -58,71 +68,58 @@ const Work = () => {
   }, []);
 
   return (
-    <div id="work-section" className="py-12  mb-8 mt-24 md:mt-48  md:mb-48">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8  space-y-16 md:space-y-28">
+    <div id="work-section" className="py-12 mb-24 mt-12 md:mt-20 md:mb-48">
+      <div className="text-center text-[#C59BFF] mb-4 md:mb-16 text-md">PROJECTS</div>
+
+      <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
         {projects.map((project, index) => (
           <div
             key={index}
             ref={(el) => (projectRefs.current[index] = el)}
-            className={`opacity-0 transition-opacity duration-700 transform  translate-y-10 rounded-3xl border border-[#2F363F] p-6 flex flex-col items-center text-center md:w-2/3 ${
-              index % 2 === 0 ? 'mr-auto' : 'ml-auto'
-            }`}
+            className="group opacity-0  px-4 transform translate-y-10 rounded-2xl border border-[#ebeaea] p-4 flex flex-col justify-between shadow-md bg-white dark:bg-[#1E1E1E] hover:scale-[1.02] transition-transform duration-300"
           >
-            {/* Title */}
-            <h1 className="text-5xl mt-6 mb-10 text-[#2F363F] font-bold transition-transform duration-300 transform hover:scale-105">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-[250px] object-cover rounded-lg mb-4 transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+            />
+
+            <h3 className="text-xl tracking-widest font-semibold text-[#2F363F] dark:text-white mb-2 py-2 ">
               {project.title}
-            </h1>
+            </h3>
 
-            {/* Description */}
-            <h2 className="text-xl mb-4 transition-transform duration-300 transform hover:scale-105">
-              {project.description}
-            </h2>
-
-            {/* Project Info */}
-            <p className="mb-4 text-gray-400 transition-transform duration-300 transform hover:scale-105">
-              {project.paragraph}
-            </p>
-
-            {/* Link */}
-            <div className="mt-6">
-              {project.title === "Dentflow" ? (
-                <button
-                  className="inline-flex items-center justify-center px-6 py-2 text-white bg-gradient-to-r from-[#9e88ff] to-[#d29edc] rounded-2xl shadow-md transition-transform duration-300 transform hover:scale-105"
+            <div className="flex flex-wrap gap-2 mb-3">
+              {project.paragraph.split("|").map((tech, i) => (
+                <span
+                  key={i}
+                  className={`rounded-full px-3 py-1 text-xs ${
+                    i === 0
+                      ? "bg-[rgba(197,155,255,0.2)] text-[#2F363F] dark:text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                      : "border border-gray-300 text-gray-600 dark:text-gray-300 transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                  }`}
                 >
-                  <span className="mr-2">In Progress</span>
-                  
-                </button>
-              ) : project.link.startsWith("/") ? (
-                <Link
-                  to={project.link}
-                  className="inline-flex items-center justify-center px-6 py-2 text-white bg-gradient-to-r from-[#9e88ff] to-[#d29edc] rounded-2xl shadow-md transition-transform duration-300 transform hover:scale-105"
-                >
-                  <span className="mr-2">View Project</span>
-                  <FaArrowRightLong className="transition-transform duration-300 transform hover:translate-x-2" />
-                </Link>
-              ) : (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-2 text-white bg-gradient-to-r from-[#9e88ff] to-[#d29edc] rounded-2xl shadow-md transition-transform duration-300 transform hover:scale-105"
-                >
-                  <span className="mr-2">View Project</span>
-                  <FaArrowRightLong className="transition-transform duration-300 transform hover:translate-x-2" />
-                </a>
-              )}
+                  {tech.trim()}
+                </span>
+              ))}
             </div>
 
-            {/* Image */}
-            <div className="flex w-full max-w-md mt-6">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full mb-12 h-full object-cover transition-transform duration-300 transform hover:scale-105 rounded-lg"
-              />
+            <p className="text-md font-light text-gray-800 dark:text-gray-300 mb-4 py-2 tracking-wide">
+              {project.description}
+            </p>
+
+            <div className="mt-auto flex justify-end p-6">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm px-4 py-2 bg-[rgba(197,155,255,0.2)] hover:bg-[#C59BFF] hover:text-white rounded-2xl transition-colors duration-300 transform hover:scale-105"
+              >
+                View Project
+              </a>
             </div>
           </div>
         ))}
+
       </div>
     </div>
   );
