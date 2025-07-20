@@ -10,12 +10,12 @@ const Header = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden md:mb-0">
       {/* Gradient 1 – hidden on mobile */}
       <div className="hidden sm:block absolute top-1 left-1 w-80 h-64 rounded-full bg-gradient-to-r from-[#C59BFF] to-[#FED3FF] opacity-30 blur-3xl"></div>
 
       {/* Gradient 2 – remains on all screens */}
-      <div className="absolute bottom-1 md:bottom-36 right-10 sm:right-20 w-3/4 sm:w-4/12 h-96 rounded-full bg-gradient-to-r from-[#C59BFF] to-[#FED3FF] opacity-40 blur-3xl"></div>
+      <div className="absolute bottom-12 md:bottom-36 right-10 sm:right-20 w-3/4 sm:w-4/12 h-96 rounded-full bg-gradient-to-r from-[#C59BFF] to-[#FED3FF] opacity-40 blur-3xl"></div>
 
       <div
         className={`flex flex-col md:flex-row items-center justify-between w-full max-w-6xl gap-10
