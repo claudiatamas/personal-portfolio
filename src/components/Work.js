@@ -8,7 +8,7 @@ const projects = [
     description:
       "Developing a dental management application to help dental offices efficiently organize appointments, patient records, and workflows",
     paragraph: "React JS | Tailwind CSS | Python | Artificial Intelligence",
-    link: "#",
+    link: "https://github.com/claudiatamas/dentflow",
     image: "/dentflow.png",
   },
   {
