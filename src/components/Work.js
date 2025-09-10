@@ -81,9 +81,8 @@ const Work = () => {
         <img
             src={project.image}
             alt={project.title}
-            className="w-full max-w-sm md:max-w-md rounded-lg mb-4 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-auto object-cover"
+            className="w-full h-48 md:h-64 rounded-lg mb-4 transition-transform duration-300 transform hover:scale-105 cursor-pointer object-cover"
           />
-
 
             <h3 className="text-xl tracking-widest font-semibold text-[#2F363F]  mb-2 py-2 ">
               {project.title}

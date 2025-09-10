@@ -45,7 +45,7 @@ const Header = () => {
             <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Educational Mentor</span>
           </div>
           <p className="text-gray-700 tracking-wider mb-6 text-md font-light leading-relaxed">
-            Junior designer and developer on a journey to craft meaningful, honest digital experiences that feel just right.
+            Junior designer and developer focused on building thoughtful, genuine digital experiences.
           </p>
 
           <a
