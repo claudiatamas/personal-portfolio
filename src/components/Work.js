@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import "./swiper-custom.css";
 
 const projects = [
@@ -11,13 +10,21 @@ const projects = [
     link: "https://github.com/claudiatamas/dentflow",
     image: "/dentflow.png",
   },
+   {
+    title: "Tabăra Crinul din Vale",
+    description:
+      "Developed a website for a local youth camp to provide information, registration, and activity management for campers and organizers.",
+    paragraph: "React JS | Tailwind CSS | Node JS",
+    link: "https://tabaracrinuldinvale.com/",
+    image: "/youthcamo.png",
+  },
   {
     title: "FocusKeeper",
     description:
       "Developed an application using Python and AI to monitor and optimize user focus and energy levels during driving and work sessions.",
     paragraph: "Python | Flask | Bootstrap | Machine Learning",
     link: "https://github.com/claudiatamas/FocusKeeper",
-    image: "/focus.png",
+    image: "/focuskeeper.png",
   },
   {
     title: "Carnivora",
@@ -27,14 +34,7 @@ const projects = [
     link: "https://www.figma.com/design/4JVqXFxV4ocIQj8kTQQ7EV/Carnivora-%E2%80%93-UI-UX-Passion-Project?node-id=0-1&t=GWzCVBlv5DxUMCf2-1",
     image: "/Carnivora.png",
   },
-  {
-    title: "Therapyi",
-    description:
-      "Therapyi is a dedicated platform designed to promote mental health awareness and provide essential support for students.",
-    paragraph: "PHP | JavaScript | HTML | CSS | MySQL",
-    link: "https://github.com/claudiatamas/therapyi",
-    image: "/therapy.png",
-  },
+  
 ];
 
 const Work = () => {

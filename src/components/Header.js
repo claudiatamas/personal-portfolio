@@ -39,13 +39,13 @@ const Header = () => {
             I’m <span className="font-medium text-black">Claudia</span>
           </h2>
           <div className="flex flex-wrap gap-2 mb-4">
-
+            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Data Enthusiast</span>
+            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Frontend Developer</span>
             <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">UI/UX Designer</span>
-            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Frontend Dev</span>
-            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Educational Mentor</span>
+            
           </div>
           <p className="text-gray-700 tracking-wider mb-6 text-md font-light leading-relaxed">
-            Junior designer and developer focused on building thoughtful, genuine digital experiences.
+      I create digital experiences while developing my skills in data analysis and visualization to drive informed decisions.
           </p>
 
           <a
