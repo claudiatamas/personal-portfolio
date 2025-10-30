@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiFigma } from "react-icons/si";
+import { SiGooglecolab, SiKaggle } from "react-icons/si";
 
 const Header = () => {
   const [loaded, setLoaded] = useState(false);
@@ -39,13 +39,15 @@ const Header = () => {
             I’m <span className="font-medium text-black">Claudia</span>
           </h2>
           <div className="flex flex-wrap gap-2 mb-4">
-            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Data Enthusiast</span>
-            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Frontend Developer</span>
-            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">UI/UX Designer</span>
-            
+            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Data Analysis</span>
+            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">SQL</span>
+            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Python</span>
+            <span className="border border-gray-300 rounded-full px-4 py-1 text-xs">Machine Learning</span>
+          
           </div>
           <p className="text-gray-700 tracking-wider mb-6 text-md font-light leading-relaxed">
-      I create digital experiences while developing my skills in data analysis and visualization to drive informed decisions.
+      I’m passionate about combining web development with data analysis to create meaningful applications.
+
           </p>
 
           <a
@@ -78,15 +80,17 @@ const Header = () => {
           <div className="hidden md:block w-[700px] h-[1px] bg-black" />
 
           <div className="flex gap-4 mt-2 md:mt-4 md:mr-12">
-            <a
-              href="https://www.figma.com/files/team/1330094435266435165/recents-and-sharing?fuid=1330094433288764885"
+        <a
+              href="https://www.kaggle.com/claudiatma"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 border rounded-full px-4 py-1 text-sm
                 hover:scale-110 hover:bg-purple-100 transition transform duration-300"
             >
-              <SiFigma /> Figma
+              <SiKaggle /> Kaggle
             </a>
+
+
             <a
               href="https://github.com/claudiatamas"
               target="_blank"

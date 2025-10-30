@@ -5,35 +5,37 @@ const projects = [
   {
     title: "Dentflow",
     description:
-      "Developing a dental management application to help dental offices efficiently organize appointments, patient records, and workflows",
-    paragraph: "React JS | Tailwind CSS | Python | Artificial Intelligence",
+      "Developing a dental management application using React and Python, with a machine learning model for detecting oral diseases.",
+    paragraph: "Python | React JS | SQL | Machine Learning",
     link: "https://github.com/claudiatamas/dentflow",
     image: "/dentflow.png",
-  },
-   {
-    title: "Tabăra Crinul din Vale",
-    description:
-      "Developed a website for a local youth camp to provide information, registration, and activity management for campers and organizers.",
-    paragraph: "React JS | Tailwind CSS | Node JS",
-    link: "https://tabaracrinuldinvale.com/",
-    image: "/youthcamo.png",
   },
   {
     title: "FocusKeeper",
     description:
       "Developed an application using Python and AI to monitor and optimize user focus and energy levels during driving and work sessions.",
-    paragraph: "Python | Flask | Bootstrap | Machine Learning",
+    paragraph: "Python | Flask | Pandas | Machine Learning",
     link: "https://github.com/claudiatamas/FocusKeeper",
     image: "/focuskeeper.png",
   },
   {
-    title: "Carnivora",
+    title: "Diabetes Prediction – Random Forest",
     description:
-      "Website concept for plant lovers — clean design, easy navigation, and an immersive way to explore carnivorous plants.",
-    paragraph: "Figma | UX Research | Prototyping",
-    link: "https://www.figma.com/design/4JVqXFxV4ocIQj8kTQQ7EV/Carnivora-%E2%80%93-UI-UX-Passion-Project?node-id=0-1&t=GWzCVBlv5DxUMCf2-1",
-    image: "/Carnivora.png",
+      "Implemented a Random Forest model to predict diabetes based on patient health data. Performed preprocessing, feature scaling, one-hot encoding, and model evaluation with accuracy metrics and classification reports.",
+    paragraph: "Python | Pandas | scikit-learn | Data Analysis",
+    link: "https://colab.research.google.com/drive/1v-coOiTLpYww7IZEHhzyEfxj3wExV6hd?usp=sharing",
+    image: "/diabetes.png",
   },
+   {
+    title: "Youth Camp - Crinul din Vale",
+    description:
+      "Developed a web platform for a local youth camp to manage registrations and activities. Implemented structured data handling to store and organize participant information.",
+    paragraph: "React JS | Node JS | Data Management",
+    link: "https://tabaracrinuldinvale.com/",
+    image: "/youthcamo.png",
+  },
+  
+ 
   
 ];
 

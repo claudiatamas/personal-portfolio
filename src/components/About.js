@@ -2,6 +2,10 @@ import React, { useEffect, useRef } from "react";
 import { FiCamera, FiGlobe } from 'react-icons/fi';
 import { HiOutlineLightBulb } from 'react-icons/hi';
 import { BiBookOpen } from 'react-icons/bi';
+import { FiBarChart2, FiMonitor } from "react-icons/fi";
+import { AiOutlineDatabase } from "react-icons/ai";
+import { SiPython } from "react-icons/si";
+
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -57,27 +61,27 @@ const About = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6 w-full mt-8 py-4">
 
           {[
-            {
-              icon: <FiCamera className="text-4xl  mb-2"  />,
-              title: "Photography",
-              text: "Capturing timeless moments through my lens.",
-            },
-            {
-              icon: <FiGlobe className="text-3xl mb-2" />,
-              title: "Travelling",
-              text: "Finding inspiration in every landscape.",
-            },
-            {
-              icon: <BiBookOpen className="text-4xl  mb-2" />,
-              title: "Reading",
-              text: "Exploring minds through pages.",
-            },
-            {
-              icon: <HiOutlineLightBulb className="text-4xl mb-2" />,
-              title: "Creative Tech",
-              text: "Crafting beautiful and functional web experiences.",
-            },
-          ].map((card, i) => (
+  {
+    icon: <FiBarChart2 className="text-4xl mb-2" />,
+    title: "Data Analysis",
+    text: "Exploring and interpreting datasets to extract actionable insights.",
+  },
+  {
+    icon: <SiPython className="text-4xl mb-2" />,
+    title: "Python & ML",
+    text: "Building machine learning models and automating data-driven workflows.",
+  },
+  {
+    icon: <FiCamera className="text-4xl mb-2" />,
+    title: "Photography",
+    text: "Capturing timeless moments through my lens.",
+  },
+  {
+    icon: <FiGlobe className="text-4xl mb-2" />,
+    title: "Travelling",
+    text: "Finding inspiration in every landscape.",
+  },
+].map((card, i) => (
           <div
               key={i}
               ref={(el) => (cardRefs.current[i] = el)}
@@ -103,7 +107,7 @@ const About = () => {
       key={index}
       src={src}
       alt={`About me ${index + 1}`}
-      className="w-full h-72 sm:h-full xl:h-96 cursor-pointer rounded-2xl object-cover transition-transform duration-300 transform hover:scale-105"
+      className="w-full h-56 sm:h-full xl:h-80 cursor-pointer rounded-2xl object-cover transition-transform duration-300 transform hover:scale-105"
     />
   ))}
 </div>
