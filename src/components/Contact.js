@@ -88,7 +88,7 @@ const Contact = () => {
   return (
     
     <div className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center mb-8">
-    <h2 className="text-md text-center text-[#C59BFF] mb-12 md:mb-20">CONTACT</h2> 
+    <h2 className="text-md text-center bg-gradient-to-r from-[#9454ee] to-[#bb8cfc] bg-clip-text text-transparent font-medium mb-12 md:mb-20">CONTACT</h2> 
 
   {/* Gradient Backgrounds */}
   <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-gradient-to-r from-[#C59BFF] to-[#FED3FF] opacity-20 blur-3xl"></div>
@@ -145,7 +145,7 @@ const Contact = () => {
           ></textarea>
           <button
             type="submit"
-            className="w-32 ml-auto flex items-end justify-center rounded-xl py-3 bg-[rgba(197,155,255,0.2)] font-light text-black focus:outline-none transition-transform duration-300 transform hover:scale-105"
+            className="w-32 ml-auto flex items-end justify-center rounded-xl py-3 bg-gradient-to-r from-[#9454ee] to-[#bb8cfc] font-light text-white focus:outline-none transition-transform duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             Send message
           </button>

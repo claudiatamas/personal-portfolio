@@ -18,11 +18,7 @@ const Navbar = () => {
     }, 100);
     
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -33,120 +29,129 @@ const Navbar = () => {
     };
   }, []);
 
+  const navLinks = [
+     { name: "Home", to: "hero-section" },
+    { name: "Work", to: "work-section" },
+    { name: "About", to: "about-section" },
+    { name: "Contact", to: "contact-section" },
+  ];
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ease-out transform ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-out ${
         isAnimated ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-      } ${isScrolled ? "bg-white shadow-lg h-24 " : "bg-transparent h-auto"}`}
+      } ${isScrolled ? "bg-white/95 backdrop-blur-sm shadow-lg py-4" : "bg-transparent py-6"}`}
     >
-      <nav className={`container mx-auto flex justify-center items-center ${isScrolled ? "mt-4  transition-all duration-400" : "mt-10"}`}>
-        {/* Navbar */}
-        <div
-          className={`md:flex items-center px-6 py-0 
-               border border-[#2F363F] rounded-full shadow-md" 
-           transition-all duration-400`}
-        >
-          {/* Logo */}
-          <a
-            href="/"
-            className="hidden md:flex px-1 text-sm font-medium mr-12 transition-transform duration-300 transform hover:scale-105"
+      <nav className="container mx-auto px-4">
+        {/* Desktop Navbar */}
+<div className="hidden md:flex items-center justify-center">
+  <div className={`flex items-center gap-8 px-8 py-3 bg-white/90 backdrop-blur-md transition-all duration-500 ${
+    isScrolled 
+      ? "border-0 rounded-none shadow-none" 
+      : "border border-gray-50 rounded-full shadow-lg hover:shadow-xl"
+  }`}>
+    {/* Logo */}
+  
+    {/* Nav Links */}
+    <div className="flex items-center gap-1">
+      {navLinks.map((link) =>
+        link.isExternal ? (
+          
+        <a    key={link.name}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative px-4 py-2 text-[#2F363F] font-medium text-md
+              hover:text-[#9454ee] transition-colors duration-300
+              after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 
+              after:bg-gradient-to-r after:from-[#9454ee] after:to-[#bb8cfc]
+              after:transition-all after:duration-300 hover:after:w-full"
           >
-            <img src={logo} alt="My Portfolio Logo" className="w-16" />
+            {link.name}
           </a>
-          <div className="md:hidden flex items-center justify-between w-full px-4">
-            {/* Logo Mobile */}
-            <a href="/" className="flex-shrink-0 mr-12 transition-transform duration-300 transform hover:scale-105">
-              <img src={logo} alt="My Portfolio Logo" className="w-16" />
-            </a>
+        ) : (
+          <Link
+            key={link.name}
+            to={link.to}
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="text-[#9454ee]"
+            className="relative px-4 py-2 text-[#2F363F] font-medium text-md cursor-pointer
+              hover:text-[#9454ee] transition-colors duration-300
+              after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 
+              after:bg-gradient-to-r after:from-[#9454ee] after:to-[#bb8cfc]
+              after:transition-all after:duration-300 hover:after:w-full"
+          >
+            {link.name}
+          </Link>
+        )
+      )}
+    </div>
+  </div>
+</div>
 
-            {/* Menu button Mobile */}
-            <button
-              onClick={toggleMenu}
-              className="text-[#2F363F] focus:outline-none transition-transform duration-300 transform hover:scale-105"
-            >
-              <span className="text-2xl">
-                {isOpen ? <FaTimes /> : <FaBars />}
-              </span>
-            </button>
-          </div>
+        {/* Mobile Navbar */}
 
-          {/* Nav Links */}
-          <div className="hidden md:flex space-x-2">
-            <a
-              href="/CV_Resume_Claudia_Paula_Tamas.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#2F363F] px-2 py-2 hover:text-[#bb8cfc] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
-            >
-              Resume
-            </a>
-
-            <Link
-              to="work-section"
-              smooth={true}
-              duration={500}
-              className="text-[#2F363F] px-2 py-2 hover:text-[#bb8cfc] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
-            >
-              Work
-            </Link>
-            <Link
-              to="about-section"
-              smooth={true}
-              duration={500}
-              className="text-[#2F363F] px-2 py-2 hover:text-[#bb8cfc] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
-            >
-              About
-            </Link>
-            <Link
-              to="contact-section"
-              smooth={true}
-              duration={500}
-              className="text-[#2F363F] px-2 py-2 hover:text-[#bb8cfc] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
+      <div className="md:hidden flex items-center justify-end">
+        {/* Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="p-2 text-[#2F363F] bg-white/90 backdrop-blur-md border border-gray-200 rounded-full shadow-md
+            hover:bg-gray-50 hover:shadow-lg transition-all duration-300"
+          aria-label="Toggle menu"
+        >
+          <span className="text-xl">
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </span>
+        </button>
+      </div>
       </nav>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white text-[#2F363F] flex flex-col items-center space-y-4 py-4 shadow-md">
-          <a
-            href="/CV_Resume_Claudia_Paula_Tamas.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#2F363F] px-3 py-1 hover:text-[#bb8cfc] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
-          >
-            Resume
-          </a>
-
-          <Link
-            to="work-section"
-            smooth={true}
-            duration={500}
-            className="text-[#2F363F] px-3 py-1 hover:text-[#bb8cfc] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
-          >
-            Work
-          </Link>
-          <Link
-            to="about-section"
-            smooth={true}
-            duration={500}
-            className="text-[#2F363F] px-3 py-1 hover:text-[#bb8cfc] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
-          >
-            About
-          </Link>
-          <Link
-            to="contact-section"
-            smooth={true}
-            duration={500}
-            className="text-[#2F363F] px-3 py-1 hover:text-[#bb8cfc] hover:scale-110 transition-transform duration-200 text-lg font-medium cursor-pointer"
-          >
-            Contact
-          </Link>
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg mt-4 mx-4 rounded-2xl">
+          <div className="flex flex-col py-4">
+            {navLinks.map((link, index) =>
+              link.isExternal ? (
+                
+                <a  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className={`px-6 py-3 text-[#2F363F] font-medium text-base
+                    hover:text-[#9454ee] hover:bg-purple-50 transition-all duration-300
+                    ${index === 0 ? "rounded-t-2xl" : ""} 
+                    ${index === navLinks.length - 1 ? "rounded-b-2xl" : ""}
+                    border-l-4 border-transparent hover:border-[#bb8cfc]`}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setIsOpen(false)}
+                  className={`px-6 py-3 text-[#2F363F] font-medium text-base cursor-pointer
+                    hover:text-[#9454ee] hover:bg-purple-50 transition-all duration-300
+                    ${index === 0 ? "rounded-t-2xl" : ""} 
+                    ${index === navLinks.length - 1 ? "rounded-b-2xl" : ""}
+                    border-l-4 border-transparent hover:border-[#bb8cfc]`}
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };

@@ -6,7 +6,7 @@ const projects = [
     title: "Dentflow",
     description:
       "Developing a dental management application using React and Python, with a machine learning model for detecting oral diseases.",
-    paragraph: "Python | React JS | SQL | Machine Learning",
+    paragraph: "React JS | Python | SQL | Machine Learning",
     link: "https://github.com/claudiatamas/dentflow",
     image: "/dentflow.png",
   },
@@ -14,22 +14,15 @@ const projects = [
     title: "FocusKeeper",
     description:
       "Developed an application using Python and AI to monitor and optimize user focus and energy levels during driving and work sessions.",
-    paragraph: "Python | Flask | Pandas | Machine Learning",
+    paragraph: "Bootstrap| Flask | Python ",
     link: "https://github.com/claudiatamas/FocusKeeper",
     image: "/focuskeeper.png",
   },
-  {
-    title: "Diabetes Prediction – Random Forest",
-    description:
-      "Implemented a Random Forest model to predict diabetes based on patient health data. Performed preprocessing, feature scaling, one-hot encoding, and model evaluation with accuracy metrics and classification reports.",
-    paragraph: "Python | Pandas | scikit-learn | Data Analysis",
-    link: "https://colab.research.google.com/drive/1v-coOiTLpYww7IZEHhzyEfxj3wExV6hd?usp=sharing",
-    image: "/diabetes.png",
-  },
+
    {
     title: "Youth Camp - Crinul din Vale",
     description:
-      "Developed a web platform for a local youth camp to manage registrations and activities. Implemented structured data handling to store and organize participant information.",
+      "Developed a user-friendly web platform for a local youth camp, creating interactive interfaces for managing registrations and activities, using structured data handling to ensure smooth participant management.",
     paragraph: "React JS | Node JS | Data Management",
     link: "https://tabaracrinuldinvale.com/",
     image: "/youthcamo.png",
@@ -71,7 +64,7 @@ const Work = () => {
 
   return (
     <div id="work-section" className="py-12 mb-24 mt-12 md:mt-20 md:mb-48">
-      <div className="text-center text-[#C59BFF] mb-4 md:mb-16 text-md">PROJECTS</div>
+      <div className="text-center bg-gradient-to-r from-[#9454ee] to-[#bb8cfc] bg-clip-text text-transparent mb-4 md:mb-16 text-md font-medium">PROJECTS</div>
 
       <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
         {projects.map((project, index) => (
@@ -96,8 +89,8 @@ const Work = () => {
                   key={i}
                   className={`rounded-full px-3 py-1 text-xs ${
                     i === 0
-                      ? "bg-[rgba(197,155,255,0.2)] text-[#2F363F]  transition-transform duration-300 transform hover:scale-105 cursor-pointer"
-                      : "border border-gray-300 text-gray-600  transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                      ? "bg-gradient-to-r from-[#9454ee] to-[#bb8cfc] text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                      : "border border-gray-300 text-gray-600 transition-transform duration-300 transform hover:scale-105 cursor-pointer"
                   }`}
                 >
                   {tech.trim()}
@@ -110,11 +103,11 @@ const Work = () => {
             </p>
 
             <div className="mt-auto flex justify-end p-6">
-              <a
-                href={project.link}
+  
+              <a  href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-sm px-4 py-2 bg-[rgba(197,155,255,0.2)] hover:bg-[#C59BFF] hover:text-white rounded-2xl transition-colors duration-300 transform hover:scale-105"
+                className="inline-flex items-center text-sm px-4 py-2 bg-gradient-to-r from-[#9454ee] to-[#bb8cfc] text-white rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 View Project
               </a>
