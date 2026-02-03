@@ -14,7 +14,7 @@ const projects = [
     title: "FocusKeeper",
     description:
       "Developed an application using Python and AI to monitor and optimize user focus and energy levels during driving and work sessions.",
-    paragraph: "Bootstrap| Flask | Python ",
+    paragraph: "Bootstrap | Flask | Python | Artificial Intelligence",
     link: "https://github.com/claudiatamas/FocusKeeper",
     image: "/focuskeeper.png",
   },
@@ -26,6 +26,14 @@ const projects = [
     paragraph: "React JS | Node JS | Data Management",
     link: "https://tabaracrinuldinvale.com/",
     image: "/youthcamo.png",
+  },
+  {
+    title: "PizzaPay",
+    description:
+      "Designed and developed both the UI/UX-focused frontend and backend of a React app for a pizzeria, supporting order management for staff and admin workflows.",
+    paragraph: "React JS | UI/UX | Python | SQL ",
+    link: "https://github.com/claudiatamas/pizzapay/tree/master",
+    image: "/pizzapay.png",
   },
   
  
